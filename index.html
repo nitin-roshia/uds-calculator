@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group Housing Desk Reference — Rajasthan MBB 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1a18;--ink2:#4a4a45;--ink3:#888880;
+  --paper:#f7f5f0;--paper2:#efede7;--paper3:#e5e2da;
+  --accent:#c8440a;--accent-l:#f5ede8;
+  --green:#2d6a3f;--green-l:#eaf2ec;
+  --amber:#8a5c00;--amber-l:#fdf3e0;
+  --blue:#1a4a7a;--blue-l:#e8f0f8;
+  --red:#9b1c1c;--red-l:#fef2f2;
+  --border:rgba(26,26,24,.12);--border-s:rgba(26,26,24,.22);
+  --r:6px;
+  --mono:'DM Mono',monospace;
+  --serif:'Instrument Serif',serif;
+  --sans:'DM Sans',sans-serif;
+}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:14px;line-height:1.6;padding:2rem 1rem 5rem}
+.page{max-width:960px;margin:0 auto}
+
+.hdr{border-bottom:1.5px solid var(--ink);padding-bottom:1.25rem;margin-bottom:2rem}
+.hdr-eye{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem}
+.hdr h1{font-family:var(--serif);font-size:26px;font-weight:400;line-height:1.25}
+.hdr h1 em{font-style:italic;color:var(--accent)}
+.hdr-sub{font-size:12px;color:var(--ink3);margin-top:.4rem;font-family:var(--mono)}
+
+.warn-banner{background:var(--amber-l);border:.5px solid rgba(138,92,0,.3);border-radius:var(--r);padding:.75rem 1rem;font-size:12px;color:var(--amber);margin-bottom:1.5rem;font-family:var(--mono)}
+
+.sec{margin-bottom:2rem}
+.sec-lbl{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+.sec-lbl::after{content:'';flex:1;height:.5px;background:var(--border)}
+
+.inp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.75rem;margin-bottom:1.5rem}
+.inp-g{display:flex;flex-direction:column;gap:4px}
+.inp-lbl{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink2)}
+.inp-sub{font-family:var(--mono);font-size:9px;color:var(--ink3);margin-top:1px}
+.inp-row{display:flex;align-items:center;gap:6px}
+input[type=number]{width:110px;padding:6px 10px;font-family:var(--mono);font-size:13px;background:#fff;border:.5px solid var(--border-s);border-radius:var(--r);color:var(--ink);outline:none;transition:border-color .15s}
+input[type=number]:focus{border-color:var(--accent)}
+.inp-unit{font-family:var(--mono);font-size:11px;color:var(--ink3)}
+
+.sl-row{display:flex;align-items:center;gap:10px;margin-bottom:.75rem;background:var(--paper2);padding:.65rem 1rem;border-radius:var(--r);border:.5px solid var(--border);flex-wrap:wrap}
+.sl-lbl{font-size:12.5px;color:var(--ink2);min-width:180px}
+.sl-lbl small{display:block;font-family:var(--mono);font-size:9px;color:var(--ink3);margin-top:1px}
+input[type=range]{flex:1;min-width:80px;accent-color:var(--accent)}
+.sl-val{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--accent);min-width:100px;text-align:right}
+
+.tw{overflow-x:auto;margin-bottom:.25rem}
+table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+th{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.07em;text-align:left;padding:7px 10px;background:var(--paper3);color:var(--ink2);border-bottom:1px solid var(--border-s);font-weight:500}
+td{padding:7px 10px;border-bottom:.5px solid var(--border);color:var(--ink);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+.nm{font-family:var(--mono);font-size:12px;text-align:right;white-space:nowrap}
+.rf{font-family:var(--mono);font-size:10px;color:var(--ink3);text-align:right}
+.tr{font-weight:500;background:var(--paper2)}
+.tw-warn td{background:var(--amber-l)}
+.tw-red td{background:var(--red-l)}
+.tw-green td{background:var(--green-l)}
+.tw-accent td{background:var(--accent-l)}
+.tw-blue td{background:var(--blue-l)}
+
+.b{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.05em;text-transform:uppercase;padding:2px 6px;border-radius:3px;margin-left:5px;vertical-align:middle;white-space:nowrap}
+.bw{background:var(--amber-l);color:var(--amber)}
+.bo{background:var(--green-l);color:var(--green)}
+.bi{background:var(--blue-l);color:var(--blue)}
+.br{background:var(--red-l);color:var(--red)}
+.ba{background:var(--accent-l);color:var(--accent)}
+
+/* bar chart */
+.bar-wrap{margin:.75rem 0 1.25rem;display:flex;flex-direction:column;gap:6px}
+.bar-row{display:flex;align-items:center;gap:8px;font-size:12px}
+.bar-lbl{min-width:200px;color:var(--ink2);font-size:12px}
+.bar-track{flex:1;height:16px;background:var(--paper3);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;transition:width .3s}
+.bar-val{min-width:90px;text-align:right;font-family:var(--mono);font-size:11px;color:var(--ink2)}
+.bar-sum-row{display:flex;align-items:center;gap:8px;font-size:12px;border-top:.5px solid var(--border-s);padding-top:6px;margin-top:2px}
+.bar-sum-lbl{min-width:200px;font-weight:500}
+.bar-sum-val{font-family:var(--mono);font-size:12px;font-weight:500}
+.bar-warn{color:var(--red);font-family:var(--mono);font-size:11px;margin-left:8px}
+
+.exp{background:var(--blue-l);border:.5px solid rgba(26,74,122,.15);border-radius:var(--r);padding:.9rem 1.1rem;font-size:12.5px;color:var(--blue);margin-bottom:1rem;line-height:1.65}
+.exp-g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin-top:.75rem}
+.exp-c{background:#fff;border:.5px solid rgba(26,74,122,.2);border-radius:var(--r);padding:.6rem .8rem}
+.exp-c-n{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--ink);margin-bottom:3px}
+.exp-c-l{font-size:11px;color:var(--ink2);line-height:1.45}
+
+hr{border:none;border-top:.5px solid var(--border);margin:1.75rem 0}
+.note{font-size:11px;color:var(--ink3);font-family:var(--mono);margin-top:.4rem;line-height:1.5}
+
+@media(max-width:600px){
+  .inp-grid{grid-template-columns:1fr}
+  .exp-g{grid-template-columns:1fr}
+  .bar-lbl{min-width:120px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-eye">Group Housing — Regulatory Desk Reference</div>
+  <h1>Rajasthan <em>MBB 2025</em> — Area Budget &amp; Villa Calculator</h1>
+  <div class="hdr-sub">Model Rajasthan Building Byelaws, 2025 · All percentages of net plot area or total BAR as noted · Verify with sanctioning authority before submission</div>
+</div>
+
+<div class="warn-banner">⚠ Road widening deduction must be confirmed with JDA/UIT master plan overlay before finalising. Default = 0. All calculations use net plot area.</div>
+
+<!-- INPUTS -->
+<div class="sec">
+  <div class="sec-lbl">Site &amp; design inputs — all tables update on change</div>
+  <div class="inp-grid">
+    <div class="inp-g">
+      <div class="inp-lbl">Gross plot area</div>
+      <div class="inp-sub">2 Pucca Bigha default</div>
+      <div class="inp-row"><input type="number" id="i-gross" value="5060" min="100" step="10"><span class="inp-unit">sq.m.</span></div>
+    </div>
+    <div class="inp-g">
+      <div class="inp-lbl">Road widening deduction</div>
+      <div class="inp-sub">Confirm with JDA/UIT</div>
+      <div class="inp-row"><input type="number" id="i-rded" value="0" min="0" step="5"><span class="inp-unit">sq.m.</span></div>
+    </div>
+    <div class="inp-g">
+      <div class="inp-lbl">BAR / FAR</div>
+      <div class="inp-sub">Table 1 row (ix) — 2.0</div>
+      <div class="inp-row"><input type="number" id="i-bar" value="2.0" min="0.5" max="4" step="0.25"><span class="inp-unit">ratio</span></div>
+    </div>
+    <div class="inp-g">
+      <div class="inp-lbl">Max ground coverage</div>
+      <div class="inp-sub">Table 1 row (ix) — 40%</div>
+      <div class="inp-row"><input type="number" id="i-cov" value="40" min="10" max="75" step="5"><span class="inp-unit">%</span></div>
+    </div>
+    <div class="inp-g">
+      <div class="inp-lbl">Amenity BAR</div>
+      <div class="inp-sub">Bylaw 5(vi) — min 2%, max 5%</div>
+      <div class="inp-row"><input type="number" id="i-amen" value="2" min="2" max="5" step="1"><span class="inp-unit">% of BAR</span></div>
+    </div>
+    <div class="inp-g">
+      <div class="inp-lbl">Retail BAR</div>
+      <div class="inp-sub">Bylaw 5(vii) — min 1%, max 5%</div>
+      <div class="inp-row"><input type="number" id="i-ret" value="1" min="1" max="5" step="1"><span class="inp-unit">% of BAR</span></div>
+    </div>
+    <div class="inp-g">
+      <div class="inp-lbl">Front road width</div>
+      <div class="inp-sub">For height calculation only</div>
+      <div class="inp-row"><input type="number" id="i-rw" value="30.5" min="9" step="0.5"><span class="inp-unit">m</span></div>
+    </div>
+    <div class="inp-g">
+      <div class="inp-lbl">Front setback</div>
+      <div class="inp-sub">Table 1 row (ix) — min 9 m</div>
+      <div class="inp-row"><input type="number" id="i-sf" value="9" min="0" step="0.5"><span class="inp-unit">m</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PART A -->
+<div class="sec">
+  <div class="sec-lbl">Part A — site area budget (% of net plot)</div>
+  <div class="tw"><table>
+    <colgroup><col style="width:44%"><col style="width:16%"><col style="width:16%"><col style="width:24%"></colgroup>
+    <thead><tr><th>Item</th><th>Area (sq.m.)</th><th>% of net plot</th><th>Bylaw ref</th></tr></thead>
+    <tbody>
+      <tr><td>Gross plot</td><td class="nm" id="a-gross">—</td><td class="nm">—</td><td class="rf">input</td></tr>
+      <tr class="tw-warn"><td>Road widening deduction <span class="b bw">confirm JDA/UIT</span></td><td class="nm" id="a-rded">—</td><td class="nm" id="a-rdedp">—</td><td class="rf">Urban Rules 2012, R.4(1)(vi)</td></tr>
+      <tr class="tr"><td>Net plot area — basis for all calculations</td><td class="nm" id="a-net">—</td><td class="nm">100%</td><td class="rf">—</td></tr>
+      <tr class="tw-green tr"><td>Max ground coverage — construction footprint <span class="b bo">use 100% of this</span></td><td class="nm" id="a-cov">—</td><td class="nm" id="a-covp">—</td><td class="rf">MBB Table 1, row (ix)</td></tr>
+      <tr class="tw-green"><td>Min mandatory green area <span class="b bo">non-negotiable</span></td><td class="nm" id="a-green">—</td><td class="nm">15%</td><td class="rf">MBB Bylaw 8.1(ii)</td></tr>
+      <tr><td>&nbsp;&nbsp;— min 50% of green area at natural ground level</td><td class="nm" id="a-green2">—</td><td class="nm">7.5%</td><td class="rf">MBB Bylaw 8.1(iii)</td></tr>
+      <tr><td>&nbsp;&nbsp;— green strip minimum width</td><td class="nm">4.5 m</td><td class="nm">—</td><td class="rf">MBB Bylaw 8.1(iv)</td></tr>
+      <tr class="tr"><td>Architect-distributed zone — setbacks, roads, parking, courts <span class="b bi">design decision</span></td><td class="nm" id="a-dist">—</td><td class="nm" id="a-distp">—</td><td class="rf">no bylaw prescription</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="bar-wrap" id="a-bars">
+    <div class="bar-row">
+      <span class="bar-lbl">Ground coverage (construction)</span>
+      <div class="bar-track"><div class="bar-fill" id="bar-cov" style="background:#2d6a3f"></div></div>
+      <span class="bar-val" id="bv-cov">—</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lbl">Green area (mandatory min 15%)</span>
+      <div class="bar-track"><div class="bar-fill" id="bar-grn" style="background:#86b89a"></div></div>
+      <span class="bar-val" id="bv-grn">—</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lbl">Architect-distributed (roads, setbacks, parking…)</span>
+      <div class="bar-track"><div class="bar-fill" id="bar-dist" style="background:#b8b8b0"></div></div>
+      <span class="bar-val" id="bv-dist">—</span>
+    </div>
+    <div class="bar-sum-row">
+      <span class="bar-sum-lbl">Total</span>
+      <span class="bar-sum-val">100% of net plot</span>
+    </div>
+  </div>
+  <div class="note">The architect-distributed zone contains all setbacks, internal roads, visitor parking, driveways, and open courts. The bylaws do not sub-divide this zone — that is a design decision.</div>
+</div>
+
+<!-- PART B -->
+<div class="sec">
+  <div class="sec-lbl">Part B — BAR (FAR) budget (% of total BAR)</div>
+  <div class="tw"><table>
+    <colgroup><col style="width:44%"><col style="width:16%"><col style="width:16%"><col style="width:24%"></colgroup>
+    <thead><tr><th>Item</th><th>Area (sq.m.)</th><th>% of total BAR</th><th>Bylaw ref</th></tr></thead>
+    <tbody>
+      <tr class="tr"><td>Total BAR — net plot × BAR ratio</td><td class="nm" id="b-tot">—</td><td class="nm">100%</td><td class="rf">MBB Table 1, row (ix)</td></tr>
+      <tr><td>Stilt / parking floor — fully excluded from BAR</td><td class="nm">excluded</td><td class="nm">—</td><td class="rf">MBB Bylaw 4.14(viii)</td></tr>
+      <tr class="tw-warn"><td>Amenity BAR — non-saleable, transfer to RWA on completion <span class="b bw">non-saleable</span></td><td class="nm" id="b-amen">—</td><td class="nm" id="b-amenp">—</td><td class="rf">MBB Bylaw 5(vi)</td></tr>
+      <tr><td>&nbsp;&nbsp;— optional edu / health within amenity (up to 3% additional)</td><td class="nm" id="b-edu">—</td><td class="nm">up to 3%</td><td class="rf">MBB Bylaw 5(vi)</td></tr>
+      <tr class="tw-warn"><td>Retail BAR — daily-use shops, max 45 sq.m. per shop <span class="b bw">charged at 40% rate</span></td><td class="nm" id="b-ret">—</td><td class="nm" id="b-retp">—</td><td class="rf">MBB Bylaw 5(vii)</td></tr>
+      <tr><td>&nbsp;&nbsp;— max total commercial BAR ceiling (all uses combined)</td><td class="nm" id="b-comm">—</td><td class="nm">5%</td><td class="rf">MBB Bylaw 5(vii)</td></tr>
+      <tr class="tw-green"><td>Silver IGBC / GRIHA 3★ incentive BAR — free, no betterment levy <span class="b bo">bonus</span></td><td class="nm" id="b-igbc">—</td><td class="nm">+4%</td><td class="rf">MBB Bylaw 4.15(ii)</td></tr>
+      <tr class="tw-red"><td>Silver IGBC / GRIHA 3★ certification — mandatory <span class="b br">triggers on this site</span></td><td class="nm">—</td><td class="nm">—</td><td class="rf">MBB Bylaw 4.15(v) — BAR &gt; 10,000</td></tr>
+      <tr class="tr tw-green"><td>Net saleable residential BAR (incl. IGBC bonus)</td><td class="nm" id="b-sale">—</td><td class="nm" id="b-salep">—</td><td class="rf">derived</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="bar-wrap">
+    <div class="bar-row">
+      <span class="bar-lbl">Saleable residential BAR</span>
+      <div class="bar-track"><div class="bar-fill" id="bar-sale" style="background:#2d6a3f"></div></div>
+      <span class="bar-val" id="bv-sale">—</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lbl">Amenity BAR (non-saleable)</span>
+      <div class="bar-track"><div class="bar-fill" id="bar-amen" style="background:#c8440a"></div></div>
+      <span class="bar-val" id="bv-amen">—</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lbl">Retail BAR</span>
+      <div class="bar-track"><div class="bar-fill" id="bar-ret" style="background:#8a5c00"></div></div>
+      <span class="bar-val" id="bv-ret">—</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lbl">IGBC bonus BAR (+4% free)</span>
+      <div class="bar-track"><div class="bar-fill" id="bar-igbc" style="background:#1a4a7a"></div></div>
+      <span class="bar-val" id="bv-igbc">—</span>
+    </div>
+    <div class="bar-sum-row">
+      <span class="bar-sum-lbl">Total (incl. IGBC bonus)</span>
+      <span class="bar-sum-val" id="bv-sum">—</span>
+    </div>
+  </div>
+  <div class="note">IGBC bonus BAR is added on top of the base BAR (net plot × ratio). Saleable % shown relative to total BAR including bonus.</div>
+</div>
+
+<!-- PART C -->
+<div class="sec">
+  <div class="sec-lbl">Part C — villa unit count</div>
+
+  <div class="exp">
+    <strong>Logic:</strong> Two independent constraints. The smaller result is your design unit count.
+    <div class="exp-g">
+      <div class="exp-c">
+        <div class="exp-c-n">Footprint limit</div>
+        <div class="exp-c-l">Max ground coverage area (40% of net plot) ÷ each villa's ground floor footprint. How many villas fit physically on the ground. <strong>Primary constraint for luxury villas.</strong></div>
+      </div>
+      <div class="exp-c">
+        <div class="exp-c-n">BAR ceiling</div>
+        <div class="exp-c-l">Net saleable BAR ÷ total villa BUA (all floors). Regulatory upper limit from FAR. For luxury villas this is usually higher than the footprint limit.</div>
+      </div>
+      <div class="exp-c">
+        <div class="exp-c-n">UDS plot share</div>
+        <div class="exp-c-l">Net plot ÷ final unit count. Each buyer's undivided land share — use for garden sizing and layout. Not a legal sub-division.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sl-row">
+    <span class="sl-lbl">Villa total BUA (all floors)<small>Ground + upper floors combined</small></span>
+    <input type="range" id="s-bua" min="150" max="700" value="400" step="10">
+    <span class="sl-val"><span id="v-bua">400</span> sq.m.</span>
+  </div>
+  <div class="sl-row">
+    <span class="sl-lbl">Ground floor ratio (% of total BUA)<small>Ground floor footprint as % of villa BUA</small></span>
+    <input type="range" id="s-gfr" min="30" max="70" value="50" step="5">
+    <span class="sl-val"><span id="v-gfr">50</span>%</span>
+  </div>
+
+  <div class="tw"><table>
+    <colgroup><col style="width:32%"><col style="width:14%"><col style="width:14%"><col style="width:16%"><col style="width:24%"></colgroup>
+    <thead><tr><th>Constraint</th><th>Unit count</th><th>UDS plot share</th><th>Unbuilt land / unit</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr id="c-tr1"><td>Footprint limit</td><td class="nm" id="c-r1">—</td><td class="nm" id="c-p1">—</td><td class="nm" id="c-g1">—</td><td class="rf">Coverage area ÷ villa G/F footprint</td></tr>
+      <tr id="c-tr2"><td>BAR ceiling check</td><td class="nm" id="c-r2">—</td><td class="nm" id="c-p2">—</td><td class="nm" id="c-g2">—</td><td class="rf">Saleable BAR ÷ villa BUA</td></tr>
+      <tr class="tr tw-green" id="c-tr3"><td>Final design count</td><td class="nm" id="c-r3">—</td><td class="nm" id="c-p3">—</td><td class="nm" id="c-g3">—</td><td class="rf" id="c-lim">—</td></tr>
+    </tbody>
+  </table></div>
+
+  <div id="c-alert" style="display:none;margin-top:.6rem;padding:.75rem 1rem;border-radius:var(--r);border:.5px solid rgba(155,28,28,.3);background:var(--red-l);font-size:12px;color:var(--red);font-family:var(--mono);line-height:1.6"></div>
+  <div class="note">Unbuilt land per unit = UDS share minus villa ground floor footprint — indicative outdoor area per villa within its proportional land share, including its share of roads, setbacks, and common areas.</div>
+</div>
+
+<!-- PART D -->
+<div class="sec">
+  <div class="sec-lbl">Part D — parking &amp; EV (driven by final unit count from Part C)</div>
+  <div class="tw"><table>
+    <colgroup><col style="width:44%"><col style="width:20%"><col style="width:12%"><col style="width:24%"></colgroup>
+    <thead><tr><th>Item</th><th>Count / value</th><th>Per unit</th><th>Bylaw ref</th></tr></thead>
+    <tbody>
+      <tr><td>Residential parking — 1 ECU per 115 sq.m. of saleable BAR</td><td class="nm" id="d-ecu">—</td><td class="nm" id="d-ecuu">—</td><td class="rf">MBB Table 16, row 1(ii)</td></tr>
+      <tr><td>Min per unit</td><td class="nm">1 car / unit</td><td class="nm">—</td><td class="rf">MBB Table 16, row 1(ii)</td></tr>
+      <tr><td>Max per unit (cap)</td><td class="nm">3 cars / unit</td><td class="nm">—</td><td class="rf">MBB Table 16, row 1(ii)</td></tr>
+      <tr class="tr"><td>Applied ECU (capped at max 3 per unit)</td><td class="nm" id="d-app">—</td><td class="nm">≤ 3</td><td class="rf">MBB Table 16, row 1(ii)</td></tr>
+      <tr><td>Visitor parking — mandatory 10% of applied ECU</td><td class="nm" id="d-vis">—</td><td class="nm">—</td><td class="rf">MBB Table 16, row 1(ii)</td></tr>
+      <tr class="tw-warn"><td>EV charging bays — mandatory min 10% of total ECU <span class="b bw">mandatory</span></td><td class="nm" id="d-ev">—</td><td class="nm">—</td><td class="rf">MBB Bylaw 6.14(v)</td></tr>
+      <tr class="tr"><td>Total ECU required (applied + visitor)</td><td class="nm" id="d-tot">—</td><td class="nm">—</td><td class="rf">—</td></tr>
+      <tr><td>Car bay size (excl. circulation aisle)</td><td class="nm">2.5 × 5.0 m</td><td class="nm">12.5 sq.m.</td><td class="rf">MBB Table 17</td></tr>
+      <tr><td>Aisle — two-side parking / combined entry-exit</td><td class="nm">min 5.5 m</td><td class="nm">—</td><td class="rf">MBB Bylaw 6.14(xi)</td></tr>
+      <tr><td>Aisle — one-side parking, separate entry / exit</td><td class="nm">min 4.5 m</td><td class="nm">—</td><td class="rf">MBB Bylaw 6.14(xi)</td></tr>
+      <tr><td>Entry / exit one-way only, no parking</td><td class="nm">min 3.6 m</td><td class="nm">—</td><td class="rf">MBB Bylaw 6.14(x)</td></tr>
+      <tr><td>Ramp setback from plot boundary</td><td class="nm">min 6.0 m</td><td class="nm">—</td><td class="rf">MBB Bylaw 6.14(xv)</td></tr>
+      <tr><td>Stilt floor — BAR-free when ≥ 70% used for parking</td><td class="nm">mandatory</td><td class="nm">—</td><td class="rf">MBB Bylaw 4.14(viii)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note">Parking sits within the architect-distributed zone (45% of net plot). Its area is not deducted from ground coverage — it is a design placement decision within that zone.</div>
+</div>
+
+<!-- PART E -->
+<div class="sec">
+  <div class="sec-lbl">Part E — setbacks, roads &amp; height (fixed bylaw norms)</div>
+  <div class="tw"><table>
+    <colgroup><col style="width:44%"><col style="width:20%"><col style="width:12%"><col style="width:24%"></colgroup>
+    <thead><tr><th>Item</th><th>Norm</th><th>Your site</th><th>Bylaw ref</th></tr></thead>
+    <tbody>
+      <tr><td>Front setback — facing sector road</td><td class="nm">min 9.0 m</td><td class="nm" id="e-sf">—</td><td class="rf">MBB Table 1, row (ix)</td></tr>
+      <tr><td>Side setbacks — corner plot (both sides)</td><td class="nm">min 9.0 m each</td><td class="nm">9.0 m each</td><td class="rf">MBB Table 1, row (ix)</td></tr>
+      <tr><td>Rear setback</td><td class="nm">min 9.0 m</td><td class="nm">9.0 m</td><td class="rf">MBB Table 1, row (ix)</td></tr>
+      <tr><td>Fire access corridor — clear around each block</td><td class="nm">min 6.0 m</td><td class="nm">mandatory</td><td class="rf">MBB Bylaw 4.7(vii)</td></tr>
+      <tr><td>Internal spine road min (fire vehicle access)</td><td class="nm">6.0 m carriageway</td><td class="nm">design ≥ 7 m</td><td class="rf">MBB Bylaw 4.7(vii)</td></tr>
+      <tr><td>Villa access lane — one-side parking</td><td class="nm">min 4.5 m</td><td class="nm">—</td><td class="rf">MBB Bylaw 6.14(xi)</td></tr>
+      <tr><td>One-way entry / exit, no parking</td><td class="nm">min 3.6 m</td><td class="nm">—</td><td class="rf">MBB Bylaw 6.14(x)</td></tr>
+      <tr><td>Approach road minimum for group housing</td><td class="nm">12 m</td><td class="nm">✓ 30.5 m</td><td class="rf">MBB Bylaw 5(ii)</td></tr>
+      <tr class="tr"><td>Max building height — corner plot (widest road governs)</td><td class="nm">road × 1.5 + setback</td><td class="nm" id="e-ht">—</td><td class="rf">MBB Table 1 + Bylaw 4.16(iv)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note">Setbacks, internal roads, and fire corridors all sit within the architect-distributed zone (Part A). Their dimensions above are minimum bylaw requirements — placement and distribution are design decisions.</div>
+</div>
+
+<!-- PART F -->
+<div class="sec">
+  <div class="sec-lbl">Part F — mandatory non-negotiables checklist</div>
+  <div class="tw"><table>
+    <colgroup><col style="width:50%"><col style="width:28%"><col style="width:22%"></colgroup>
+    <thead><tr><th>Requirement</th><th>Trigger / quantum</th><th>Bylaw ref</th></tr></thead>
+    <tbody>
+      <tr><td>Green area min 15% of net plot (at BAR ≤ 3.0)</td><td>plots ≥ 5,000 sq.m.</td><td class="rf">MBB Bylaw 8.1(ii)</td></tr>
+      <tr><td>Min 50% of green area at natural ground level — not on podium or stilt roof</td><td>always</td><td class="rf">MBB Bylaw 8.1(iii)</td></tr>
+      <tr><td>Green strip minimum width 4.5 m</td><td>plots ≥ 5,000 sq.m.</td><td class="rf">MBB Bylaw 8.1(iv)</td></tr>
+      <tr><td>Tree plantation — 2 trees per 80 sq.m. of net plot area</td><td>all plots &gt; 90 sq.m.</td><td class="rf">MBB Bylaw 8.2</td></tr>
+      <tr><td>Rainwater harvesting with filter tank — rooftop collection</td><td>plots ≥ 225 sq.m.</td><td class="rf">MBB Bylaw 8.3</td></tr>
+      <tr><td>Rooftop solar — all common areas, staircases, corridors</td><td>plots ≥ 500 sq.m.</td><td class="rf">MBB Bylaw 8.4</td></tr>
+      <tr><td>EV charging — min 10% of total required ECU</td><td>all group housing</td><td class="rf">MBB Bylaw 6.14(v)</td></tr>
+      <tr><td>Visitor parking — min 10% of total ECU</td><td>group housing</td><td class="rf">MBB Table 16</td></tr>
+      <tr><td>Waste bins — 2 per every 30 dwelling units</td><td>group housing</td><td class="rf">MBB Bylaw 8.5 / Table 19</td></tr>
+      <tr><td>Amenity BAR 2–5% of total BAR — non-saleable, transfer to RWA on completion</td><td>group housing</td><td class="rf">MBB Bylaw 5(vi)</td></tr>
+      <tr><td>Daily-use retail min 1% of total BAR, max shop 45 sq.m.</td><td>group housing</td><td class="rf">MBB Bylaw 5(vii)</td></tr>
+      <tr class="tw-red"><td>Silver IGBC / GRIHA 3★ certification — mandatory <span class="b br">triggers on this site</span></td><td>total BAR &gt; 10,000 sq.m.</td><td class="rf">MBB Bylaw 4.15(v)</td></tr>
+      <tr class="tw-green"><td>Silver certification bonus — +4% incentive BAR free, no betterment levy</td><td>on Silver certification</td><td class="rf">MBB Bylaw 4.15(ii)</td></tr>
+      <tr><td>Stilt floor for parking — mandatory, BAR-free</td><td>plots &gt; 90 sq.m.</td><td class="rf">MBB Table 1, Note 1</td></tr>
+      <tr><td>Corner plot boundary wall — max 0.75 m height at corner radius</td><td>corner plots</td><td class="rf">MBB Bylaw 6.13</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer style="margin-top:3rem;padding-top:1.25rem;border-top:1.5px solid var(--ink);text-align:center">
+
+  <div style="font-family:var(--mono);font-size:10px;color:var(--ink3);line-height:1.7">
+    Prepared by <span style="color:var(--ink)">Project Developer — Pellacia</span>
+    &nbsp;·&nbsp;
+    UDS Calculator, June 2026
+  </div>
+
+  <div style="font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:6px">
+    © 2026 <span style="color:var(--ink)">Ar. Nitin Kumar Roshia / Pellacia</span>. All rights reserved.
+  </div>
+</div>
+
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const sqm=n=>Math.round(n).toLocaleString('en-IN')+' sq.m.';
+const pct=p=>p.toFixed(1)+'%';
+const N=n=>Math.round(n).toLocaleString('en-IN');
+
+function recalc(){
+  const gross = +$('i-gross').value||5060;
+  const rded  = +$('i-rded').value||0;
+  const bar   = +$('i-bar').value||2.0;
+  const covP  = +$('i-cov').value||40;
+  const amenP = +$('i-amen').value||2;
+  const retP  = +$('i-ret').value||1;
+  const rw    = +$('i-rw').value||30.5;
+  const sf    = +$('i-sf').value||9;
+  const bua   = +$('s-bua').value||400;
+  const gfr   = +$('s-gfr').value/100||0.50;
+
+  // Core areas
+  const net      = gross - rded;
+  const covArea  = net * covP / 100;       // max construction footprint
+  const greenArea= net * 0.15;             // mandatory green (15%)
+  const distArea = net - covArea - greenArea; // architect-distributed remainder
+
+  // BAR budget
+  const totalBAR = net * bar;
+  const amenBAR  = totalBAR * amenP / 100;
+  const retBAR   = totalBAR * retP  / 100;
+  const commCeil = totalBAR * 0.05;
+  const igbcBAR  = totalBAR * 0.04;       // +4% bonus on Silver
+  const saleBAR  = totalBAR - amenBAR - retBAR + igbcBAR;
+  const totalWithBonus = totalBAR + igbcBAR;
+
+  // Part A
+  $('a-gross').textContent = sqm(gross);
+  $('a-rded').textContent  = sqm(rded);
+  $('a-rdedp').textContent = pct(rded/gross*100);
+  $('a-net').textContent   = sqm(net);
+  $('a-cov').textContent   = sqm(covArea);
+  $('a-covp').textContent  = pct(covP);
+  $('a-green').textContent = sqm(greenArea);
+  $('a-green2').textContent= sqm(greenArea*0.5);
+  $('a-dist').textContent  = sqm(distArea);
+  $('a-distp').textContent = pct(distArea/net*100);
+
+  // Part A bars
+  $('bar-cov').style.width  = covP+'%';
+  $('bar-grn').style.width  = '15%';
+  $('bar-dist').style.width = pct(distArea/net*100);
+  $('bv-cov').textContent   = pct(covP);
+  $('bv-grn').textContent   = '15%';
+  $('bv-dist').textContent  = pct(distArea/net*100);
+
+  // Part B
+  $('b-tot').textContent   = sqm(totalBAR);
+  $('b-amen').textContent  = sqm(amenBAR);
+  $('b-amenp').textContent = pct(amenP);
+  $('b-edu').textContent   = sqm(totalBAR*0.03);
+  $('b-ret').textContent   = sqm(retBAR);
+  $('b-retp').textContent  = pct(retP);
+  $('b-comm').textContent  = sqm(commCeil);
+  $('b-igbc').textContent  = sqm(igbcBAR);
+  $('b-sale').textContent  = sqm(saleBAR);
+  $('b-salep').textContent = pct(saleBAR/totalWithBonus*100);
+
+  // Part B bars (relative to totalWithBonus)
+  const salePct = saleBAR/totalWithBonus*100;
+  const amenPctB= amenBAR/totalWithBonus*100;
+  const retPctB = retBAR/totalWithBonus*100;
+  const igbcPct = igbcBAR/totalWithBonus*100;
+  $('bar-sale').style.width = pct(salePct);
+  $('bar-amen').style.width = pct(amenPctB);
+  $('bar-ret').style.width  = pct(retPctB);
+  $('bar-igbc').style.width = pct(igbcPct);
+  $('bv-sale').textContent  = pct(salePct);
+  $('bv-amen').textContent  = pct(amenPctB);
+  $('bv-ret').textContent   = pct(retPctB);
+  $('bv-igbc').textContent  = pct(igbcPct);
+  $('bv-sum').textContent   = sqm(totalWithBonus);
+
+  // Part C
+  $('v-bua').textContent = bua;
+  $('v-gfr').textContent = Math.round(gfr*100);
+
+  const villaGF = bua * gfr;              // each villa's ground floor footprint
+  const r1 = villaGF > 0 ? Math.floor(covArea / villaGF) : 0;
+  const r2 = bua > 0     ? Math.floor(saleBAR / bua)     : 0;
+  const r3 = Math.min(r1, r2);
+  const binding = r1 <= r2 ? 'Footprint (Part A) is binding' : 'BAR ceiling (Part B) is binding';
+
+  const uds = u => u > 0 ? N(net/u)+' sq.m.' : '—';
+  const gdn = u => u > 0 ? N(net/u - villaGF)+' sq.m.' : '—';
+
+  $('c-r1').textContent = r1+' villas'; $('c-p1').textContent=uds(r1); $('c-g1').textContent=gdn(r1);
+  $('c-r2').textContent = r2+' villas'; $('c-p2').textContent=uds(r2); $('c-g2').textContent=gdn(r2);
+  $('c-r3').textContent = r3+' villas'; $('c-p3').textContent=uds(r3); $('c-g3').textContent=gdn(r3);
+  $('c-lim').textContent = binding;
+
+  // Violation logic
+  const alerts = [];
+  const tr1 = $('c-tr1'); const tr2 = $('c-tr2'); const tr3 = $('c-tr3');
+  // Reset row styles
+  tr1.className = ''; tr2.className = ''; tr3.className = 'tr tw-green';
+
+  // Violation 1: BAR ceiling is lower than footprint — BAR is binding, unusual for luxury villas
+  if (r2 < r1) {
+    tr2.className = 'tw-red';
+    const flrs = villaGF > 0 ? (bua / villaGF).toFixed(1) : '?';
+    alerts.push('⚠ BAR ceiling is binding ('+r2+' units), not footprint ('+r1+' units). At '+r2+' units, each villa needs ~'+flrs+' floors to consume its BAR allocation. Reduce villa BUA or increase ground floor ratio.');
+  }
+
+  // Violation 2: Ground floor footprint per villa exceeds what coverage allows even for 1 villa
+  if (r1 === 0) {
+    tr1.className = 'tw-red';
+    alerts.push('⚠ Ground floor footprint ('+Math.round(villaGF)+' sq.m.) exceeds total available coverage area ('+Math.round(covArea)+' sq.m.). Even 1 villa cannot fit. Reduce villa BUA, reduce ground floor ratio, or increase ground coverage % in inputs.');
+  }
+
+  // Violation 3: Floors required exceeds reasonable limit (>4 floors for luxury villa)
+  const floorsNeeded = gfr > 0 ? (1 / gfr) : 0;
+  if (floorsNeeded > 4) {
+    tr1.className = tr1.className || '';
+    alerts.push('⚠ Ground floor ratio of '+Math.round(gfr*100)+'% implies '+floorsNeeded.toFixed(1)+' floors per villa. Above 4 floors, the building type shifts from villa to apartment — verify with your building plan typology and fire NOC requirements (MBB Bylaw 4.7).');
+  }
+
+  // Violation 4: Final count is 0
+  if (r3 === 0) {
+    tr3.className = 'tr tw-red';
+    alerts.push('⚠ Final design count is 0. No viable villa configuration exists at these inputs. Adjust villa BUA, ground floor ratio, or site parameters.');
+  }
+
+  // Violation 5: BAR would be exceeded if footprint count is used with full floors
+  const totalBUAIfR1 = r1 * bua;
+  if (totalBUAIfR1 > saleBAR && r1 > r2) {
+    alerts.push('⚠ Building '+r1+' villas at '+bua+' sq.m. BUA each = '+Math.round(totalBUAIfR1)+' sq.m. total BUA, which exceeds saleable BAR of '+Math.round(saleBAR)+' sq.m. by '+Math.round(totalBUAIfR1-saleBAR)+' sq.m. Use final design count of '+r3+' units only.');
+  }
+
+  const alertBox = $('c-alert');
+  if (alerts.length > 0) {
+    alertBox.style.display = 'block';
+    alertBox.innerHTML = alerts.join('<br><br>');
+  } else {
+    alertBox.style.display = 'none';
+  }
+
+  // Part D — from final unit count (r3)
+  const ecuRaw = Math.ceil(saleBAR / 115);
+  const ecuCap = r3 * 3;
+  const applied= Math.min(ecuRaw, ecuCap);
+  const visitor= Math.ceil(applied * 0.10);
+  const ev     = Math.ceil(applied * 0.10);
+  const totECU = applied + visitor;
+  $('d-ecu').textContent  = ecuRaw+' ECU';
+  $('d-ecuu').textContent = r3>0 ? '~'+Math.ceil(ecuRaw/r3)+' / unit' : '—';
+  $('d-app').textContent  = applied+' ECU';
+  $('d-vis').textContent  = visitor+' bays';
+  $('d-ev').textContent   = ev+' bays';
+  $('d-tot').textContent  = totECU+' ECU total';
+
+  // Part E
+  $('e-sf').textContent = sf+' m';
+  $('e-ht').textContent = (rw*1.5+sf).toFixed(2)+' m';
+}
+
+['i-gross','i-rded','i-bar','i-cov','i-amen','i-ret','i-rw','i-sf']
+  .forEach(id=>$(id).addEventListener('input',recalc));
+['s-bua','s-gfr'].forEach(id=>$(id).addEventListener('input',recalc));
+recalc();
+</script>
+</body>
+</html>
